@@ -1,0 +1,129 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.logo {
+  max-width: 15rem;
+  height: 15rem;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+  filter: drop-shadow(0 0 2em #8f0505bd);
+}
+.logo:hover {
+  filter: drop-shadow(0 0 2em #b60404bd);
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+.card {
+  padding: 2em;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+
+.read-the-docs {
+  color: #888;
+}
+
+.conteiner {
+  display: flex;
+  flex-direction: column;
+  font-size: 24px;
+}
+
+.upgrade {
+  button {
+    width: 300px;
+    height: 55px;
+    border-radius: 4px;
+    border: 1px solid transparent;
+    padding: 0.6em 1.2em;
+    font-size: 1.5em;
+    font-weight: 500;
+    background-color: #c50202;
+    cursor: pointer;
+    transition: border-color 0.25s;
+  }
+  button:hover {
+    border-color: #373fd4;
+    background-color: #e00303;
+  }
+  button:focus,
+  button:focus-visible {
+    outline: 4px auto -webkit-focus-ring-color;
+  }
+}
+
+.modal {
+  height: 100vh;
+  width: 100vw;
+  background-color: rgba(0, 0, 0, 0.4);
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  pointer-events: none;
+  transition: 0.5s;
+
+  &.active {
+    opacity: 1;
+    pointer-events: all;
+  }
+}
+
+.modal__content {
+  padding: 10px;
+  border-radius: 10px;
+  background-color: rgb(43, 43, 43);
+  height: 400px;
+  width: 300px;
+  transform: scale(0.5);
+  transition: 0.5s;
+  display: flex;
+    justify-content: center; 
+    align-items: center; 
+    flex-direction: column; 
+
+  &.active {
+    transform: scale(1);
+  }
+
+  
+
+  button {
+    margin-top: 1.5rem;
+    line-height: 5px;
+    background-color: rgb(165, 11, 11);
+    width: 170px;
+    height: 50px;
+
+    p{
+      color: rgba(255, 255, 255, 0.5);
+    }
+
+    &:hover {
+      background-color: rgb(199, 10, 10);
+    }
+  }
+}

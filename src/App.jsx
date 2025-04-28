@@ -23,7 +23,7 @@ function App() {
 
       
       const newCosts = [...upgradeCosts];
-      newCosts[index] *= 1.5; 
+      newCosts[index] *= 2; 
       setUpgradeCosts(newCosts);
     }
   };
